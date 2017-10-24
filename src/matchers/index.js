@@ -4,8 +4,14 @@ import toContainValues from './toContainValues';
 import toEqualCaseInsensitive from './toEqualCaseInsensitive';
 import toStartWith from './toStartWith';
 import toBeNegative from './toBeNegative';
+import toContainKey from './toContainKey';
 
-export default [toBeTrue, toContainValue, toContainValues, toEqualCaseInsensitive, toStartWith, toBeNegative].reduce(
-  (acc, matcher) => ({ ...acc, ...matcher }),
-  {}
-);
+export default [
+  toBeTrue,
+  toContainValue,
+  toContainValues,
+  toEqualCaseInsensitive,
+  toStartWith,
+  toBeNegative,
+  toContainKey
+].reduce((acc, matcher) => ({ ...acc, ...matcher }), {});
